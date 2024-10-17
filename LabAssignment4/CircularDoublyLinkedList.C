@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for a circular doubly linked list node
 struct Node {
     int data;
     struct Node *prev;
     struct Node *next;
 };
 
-// Function to create a node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -17,7 +15,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to display elements of the list
 void displayList(struct Node* head) {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -31,7 +28,6 @@ void displayList(struct Node* head) {
     printf("\n");
 }
 
-// Function to insert a node at the beginning
 struct Node* insertAtBeginning(struct Node* head, int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL) {
@@ -45,7 +41,6 @@ struct Node* insertAtBeginning(struct Node* head, int data) {
     return newNode;
 }
 
-// Function to insert a node at the end
 struct Node* insertAtEnd(struct Node* head, int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL) {
